@@ -7,6 +7,7 @@ const Navigation = () => {
                 <a className="item">Home</a>
                 <a className="item">About</a>
                 <a className="item">Menu</a>
+                <a className="item">Create your own</a>
             </div>
         </div>
     )
