@@ -6,6 +6,7 @@ const Navigation = () => {
             <div className="ui inverted secondary pointing menu">
                 <a className="item">Home</a>
                 <a className="item">About</a>
+                <a className="item">Menu</a>
             </div>
         </div>
     )
