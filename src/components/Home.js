@@ -1,10 +1,11 @@
 import React from 'react'
 import './Home.css'
+import Navigation from './Navigation'
 
 const Home = () => {
     return (
         <div className="home">
-            Home
+            <Navigation />
         </div>
     )
 }
