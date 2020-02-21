@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
     return (
-        <div style={{ color: 'white' }}>
+        <div className="home">
             Home
         </div>
     )
