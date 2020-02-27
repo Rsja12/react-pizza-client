@@ -5,6 +5,13 @@ import { Redirect } from 'react-router-dom'
 import { postPizza } from '../actions'
 
 export class Form extends Component {
+
+    state ={
+        name: '',
+        description: '',
+        submitted: false 
+    }
+
     render() {
         return (
             <div>
