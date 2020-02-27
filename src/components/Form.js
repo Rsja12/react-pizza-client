@@ -29,6 +29,11 @@ export class Form extends Component {
             this.setState({
                 description: newDescription
             })
+        } else {
+            takeOff = topping.name
+            this.setState({
+                description: this.state.description.replace(takeOff, '')
+            })
         }
     }
 
