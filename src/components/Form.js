@@ -12,6 +12,12 @@ export class Form extends Component {
         submitted: false 
     }
 
+    handleName = e => {
+        this.setState({
+            name: e.target.value 
+        })
+    }
+
     render() {
         const { name, description } = this.state 
         return (
