@@ -25,6 +25,7 @@ export class Form extends Component {
         let takeOff
         if ( topping.checked ) {
             allToppings = this.state.description.concat(topping.name)
+            //splits where lowercase meets uppercase 
             newDescription = allToppings.split(/(?=[A-Z])/).join(' ')
             this.setState({
                 description: newDescription
@@ -52,7 +53,7 @@ export class Form extends Component {
         }
         return (
             <div className="ui container">
-                <form className="ui form">
+                <form onSubmit={this.handleSubmit} className="ui form">
                 <h2>Sauce</h2>
                     <div className="inline fields">
                         <div className="field">
