@@ -49,7 +49,7 @@ export class Form extends Component {
         const { name, description } = this.state 
         return (
             <div className="ui container">
-                <form onSubmit={this.handleSubmit} className="ui form">
+                <form id="form" onSubmit={this.handleSubmit} className="ui form">
                 <h2>Sauce</h2>
                     <div className="inline fields">
                         <div className="field">
