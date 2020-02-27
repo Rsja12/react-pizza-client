@@ -25,7 +25,7 @@ export class Menu extends Component {
         return (
             <div>
                 <Navigation />
-                
+                { this.renderMenu() }
             </div>
         )
     }
