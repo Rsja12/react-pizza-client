@@ -38,9 +38,6 @@ export class Form extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.setState({
-            submitted: true
-        })
         this.props.postPizza(this.state)
     }
 
