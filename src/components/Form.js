@@ -21,4 +21,4 @@ export class Form extends Component {
     }
 }
 
-export default Form
+export default connect(null, { postPizza: postPizza })(Form)
