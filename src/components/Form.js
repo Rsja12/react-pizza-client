@@ -7,8 +7,7 @@ export class Form extends Component {
 
     state ={
         name: '',
-        description: '',
-        submitted: false 
+        description: ''
     }
 
     handleName = e => {
