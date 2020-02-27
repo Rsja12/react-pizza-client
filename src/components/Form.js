@@ -18,6 +18,13 @@ export class Form extends Component {
         })
     }
 
+    handleToppings = e => {
+        let toppings = e.target
+        let allToppings
+        let newDescription
+        let takeOff
+    }
+
     render() {
         const { name, description } = this.state 
         return (
