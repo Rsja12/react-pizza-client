@@ -1,4 +1,5 @@
 import React from 'react'
+import './PizzaItem.css'
 
 const PizzaItem = ({ name, description }) => {
     return (
