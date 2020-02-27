@@ -10,3 +10,18 @@ export const fetchMenu = () => {
         }) )
     }
 }
+
+export const postPizza = (pizza) => {
+    return (dispatch) => {
+        fetch('http://localhost:3000/pizzas', {
+            method: 'POST',
+            headers: { 'Content-type': 'application/json' },
+            body: JSON.stringify(pizza)
+        })
+        .then(res => res.json())
+        .then(pizza => dispatch({
+            type: 'POST_PIZZA',
+            payload: pizza
+        }))
+    }
+}
