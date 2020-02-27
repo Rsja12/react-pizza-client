@@ -2,7 +2,7 @@ import React from 'react'
 
 const PizzaItem = () => {
     return (
-        <div>
+        <div className="ui container center aligned">
             
         </div>
     )
