@@ -46,6 +46,7 @@ export class Form extends Component {
         this.setState({
             name: ''
         })
+        this.clearBoxes()
     }
 
     render() {
