@@ -25,6 +25,10 @@ export class Form extends Component {
         let takeOff
         if ( topping.checked ) {
             allToppings = this.state.description.concat(topping.name)
+            newDescription = allToppings.split(/(?=[A-Z])/).join(' ')
+            this.setState({
+                description: newDescription
+            })
         }
     }
 
