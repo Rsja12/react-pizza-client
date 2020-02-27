@@ -43,9 +43,6 @@ export class Form extends Component {
 
     render() {
         const { name, description } = this.state 
-        if ( this.state.submitted ) {
-            return <Redirect to="/menu" />
-        }
         return (
             <div className="ui container">
                 <form onSubmit={this.handleSubmit} className="ui form">
