@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import { fetchMenu } from '../actions'
 import Navigation from '../components/Navigation'
 import PizzaItem from '../components/PizzaItem'
 
