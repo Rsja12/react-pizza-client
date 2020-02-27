@@ -47,6 +47,7 @@ export class Form extends Component {
             name: ''
         })
         this.clearBoxes()
+        alert("Thanks! We'll add your pizza to the list!")
     }
 
     render() {
