@@ -10,11 +10,15 @@ export class Menu extends Component {
         this.props.fetchMenu()
     }
 
+    renderMenu() {
+        
+    }
 
     render() {
         return (
             <div>
                 <Navigation />
+                
             </div>
         )
     }
