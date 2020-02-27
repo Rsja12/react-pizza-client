@@ -10,7 +10,7 @@ export class Menu extends Component {
         this.props.fetchMenu()
     }
 
-    
+
     render() {
         return (
             <div>
@@ -19,5 +19,9 @@ export class Menu extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({
+    menu: state.menu
+})
 
 export default Menu
