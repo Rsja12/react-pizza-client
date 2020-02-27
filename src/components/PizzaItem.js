@@ -4,8 +4,8 @@ const PizzaItem = () => {
     return (
         <div className="ui container center aligned">
             <div className="ui segment">
-                <div className="header"></div>
-                <div></div>
+                <div className="header">{name}</div>
+                <div>{description}</div>
             </div>
         </div>
     )
