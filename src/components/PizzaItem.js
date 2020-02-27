@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PizzaItem = () => {
+const PizzaItem = ({ name, description }) => {
     return (
         <div className="ui container center aligned">
             <div className="ui segment">
