@@ -19,10 +19,13 @@ export class Form extends Component {
     }
 
     handleToppings = e => {
-        let toppings = e.target
+        let topping = e.target
         let allToppings
         let newDescription
         let takeOff
+        if ( topping.checked ) {
+            allToppings = this.state.description.concat(topping.name)
+        }
     }
 
     render() {
