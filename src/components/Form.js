@@ -36,6 +36,10 @@ export class Form extends Component {
         }
     }
 
+    clearBoxes = () => {
+        document.getElementById('form').reset()
+    }
+
     handleSubmit = e => {
         e.preventDefault()
         this.props.postPizza(this.state)
