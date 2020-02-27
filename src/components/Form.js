@@ -43,6 +43,9 @@ export class Form extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.postPizza(this.state)
+        this.setState({
+            name: ''
+        })
     }
 
     render() {
