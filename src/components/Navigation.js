@@ -8,7 +8,7 @@ const Navigation = () => {
             <div className="ui inverted secondary pointing menu">
                 <NavLink to="/" exact className="item">Home</NavLink>
                 <NavLink to="/about" className="item">About</NavLink>
-                <NavLink to="/menu" className="item">Menu</NavLink>
+                <NavLink to="/pizzas" className="item">Menu</NavLink>
                 <NavLink to="/formParent" className="item">Make Your Own</NavLink>
             </div>
         </div>
