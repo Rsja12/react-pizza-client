@@ -25,7 +25,3 @@ export const postPizza = (pizza) => {
         }))
     }
 }
-
-export const filterMenu = (input) => {
-    
-}
