@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Navigation from '../components/Navigation'
 import Form from '../components/Form'
+import './FormParent.css'
 
 export class FormParent extends Component {
     render() {

@@ -297,8 +297,8 @@ export class Form extends Component {
                     />
                 </div>
 
-                <div>
-                    <button type="submit">Make Pizza</button>
+                <div style={{ marginTop: 50, marginLeft: 485 }}>
+                    <button className="ui button" type="submit">Make Pizza</button>
                 </div>
 
             </form>
