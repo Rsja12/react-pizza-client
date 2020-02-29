@@ -19,9 +19,16 @@ export const postPizza = (pizza) => {
             body: JSON.stringify(pizza)
         })
         .then(res => res.json())
-        .then(pizza => dispatch({
-            type: 'POST_PIZZA',
-            payload: pizza
-        }))
+        .then(pizza => {
+            if (pizza.error) {
+                alert(pizza.error)
+            } else {
+                dispatch({
+                    type: 'POST_PIZZA',
+                    payload: pizza
+                })
+                alert("Thanks! we'll add it to the list!")
+            }
+        })
     }
 }
