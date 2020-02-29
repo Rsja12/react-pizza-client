@@ -26,6 +26,12 @@ export class Menu extends Component {
         return (
             <div>
                 <Navigation />
+                <form className="ui container">
+                    <div className="ui fluid icon input">
+                        <input type="text" placeholder="Search" />
+                        <i className="search icon"></i>
+                    </div>
+                </form>
                 { this.renderMenu() }
             </div>
         )
