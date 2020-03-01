@@ -30,8 +30,9 @@ export class Form extends Component {
             })
         } else {
             takeOff = topping.name
+            newDescription = this.state.description.replace(takeOff, '')
             this.setState({
-                description: this.state.description.replace(takeOff, '')
+                description: newDescription
             })
         }
     }
