@@ -23,7 +23,6 @@ export class Menu extends Component {
     }
 
     render() {
-        console.log(this.props.menu)
         return (
             <div>
                 <Navigation />
