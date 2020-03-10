@@ -13,3 +13,7 @@ const PizzaItem = ({ name, description }) => {
 }
 
 export default PizzaItem
+
+
+
+

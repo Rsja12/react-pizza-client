@@ -5,7 +5,7 @@ import { postPizza } from '../actions'
 
 export class Form extends Component {
 
-    state ={
+    state = {
         name: '',
         description: ''
     }
