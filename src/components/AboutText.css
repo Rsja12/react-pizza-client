@@ -3,3 +3,8 @@
     top: 65%;
     left: 75%;
 }
+
+.about-text h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
