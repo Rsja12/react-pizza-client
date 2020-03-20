@@ -1,4 +1,5 @@
 import React from 'react'
+import './AboutText.css'
 
 const AboutText = () => {
     return (
