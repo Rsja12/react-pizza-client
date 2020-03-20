@@ -299,7 +299,7 @@ export class Form extends Component {
                     />
                 </div>
 
-                <div style={{ marginTop: 75, marginLeft: 485 }}>
+                <div>
                     <button className="ui blue button" type="submit">Make Pizza</button>
                 </div>
 
