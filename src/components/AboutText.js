@@ -3,7 +3,7 @@ import './AboutText.css'
 
 const AboutText = () => {
     return (
-        <div>
+        <div className="about-text">
             <h2>Build Your Own Pizza<br />Fresh Ingredients<br />$8.99</h2>
         </div>
     )
