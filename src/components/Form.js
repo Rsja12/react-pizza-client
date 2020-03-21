@@ -300,7 +300,7 @@ export class Form extends Component {
                 </div>
 
                 <div>
-                    <button className="ui blue button" type="submit">Make Pizza</button>
+                    <button className="ui blue button" type="submit">Add To Cart</button>
                 </div>
 
             </form>

@@ -26,6 +26,7 @@ export class Menu extends Component {
         return (
             <div>
                 <Navigation />
+                <h1 style={{ textAlign: 'center' }}>House Pizzas</h1>
                 { this.renderMenu() }
             </div>
         )
