@@ -22,3 +22,7 @@
 
     border-radius: 6px;
 }
+
+.item.cart {
+    margin-left: 50%;
+}
