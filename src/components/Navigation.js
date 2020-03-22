@@ -11,7 +11,7 @@ const Navigation = () => {
                 <NavLink to="/pizzas" exact className="item">Menu</NavLink>
                 <NavLink to="/pizzas/new" exact className="item">Make Your Own</NavLink>
                 <div className="ui right inverted secondary pointing menu">
-                    <NavLink to="/pizzas/new" exact className="item cart">Cart</NavLink>    
+                    <NavLink to="/pizzas/new" exact className="item cart"><i class="shopping cart icon"></i></NavLink>    
                 </div>
             </div>
         </div>
