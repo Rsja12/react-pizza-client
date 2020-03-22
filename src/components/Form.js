@@ -300,7 +300,7 @@ export class Form extends Component {
                 </div>
 
                 <div>
-                    <button className="ui blue button" type="submit">Add To Cart</button>
+                    <button style={{ backgroundColor: '#F57C00', color: 'white' }} className="ui button" type="submit">Add To Cart</button>
                 </div>
 
             </form>
