@@ -31,9 +31,9 @@ export const postPizza = (pizza) => {
     }
 }
 
-export const addToCart = (id) => {
+export const addToCart = (pizza) => {
     return {
         type: 'ADD_TO_CART',
-        id: id 
+        payload: pizza 
     }
 }
