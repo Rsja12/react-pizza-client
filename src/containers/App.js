@@ -5,7 +5,6 @@ import Home from './Home'
 import About from './About'
 import Menu from './Menu'
 import FormParent from './FormParent'
-import Orders from './Orders'
 import './App.css'
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
                 <Route exact path="/about" component={About} />
                 <Route exact path="/pizzas" component={Menu} />
                 <Route exact path="/pizzas/new" component={FormParent} />
-                <Route exact path="/" component={Orders} />
             </div>
         </Router>
     )

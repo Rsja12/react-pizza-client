@@ -25,7 +25,6 @@ import './PizzaItem.css'
                         className="button" 
                         type="submit">add to cart
                     </button>
-                    <h1>{this.state.items}</h1>
                 </div>
             </div>
         )
