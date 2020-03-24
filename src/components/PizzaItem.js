@@ -3,14 +3,8 @@ import './PizzaItem.css'
     
     export class PizzaItem extends Component {
 
-    state = {
-        items: 0
-    }
-
     handleBtn = () => {
-        this.setState( {
-            items: this.state.items + 1
-        })
+       
     }
 
     render() {
