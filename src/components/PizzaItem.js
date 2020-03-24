@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+import { addToCart } from '../actions'
 import './PizzaItem.css'
     
     export class PizzaItem extends Component {
 
-    handleBtn = () => {
-       
+    handleBtn = (id) => {
+       this.props.addToCart(id)
     }
 
     render() {
         const { name, description } =  this.props
+        console.log(this.props)
+        // console.log(this.props)
         return (
             <div className="ui container center aligned">
                 <div className="ui segment">
@@ -25,7 +30,7 @@ import './PizzaItem.css'
     }
 }
 
-export default PizzaItem
+export default connect(null, { addToCart })(PizzaItem)
 
 
 

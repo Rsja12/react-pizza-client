@@ -16,6 +16,7 @@ export class Menu extends Component {
         return this.props.menu.map( pizza => {
             return <PizzaItem 
                     key={pizza.id}
+                    id={pizza.id}
                     name={pizza.name}
                     description={pizza.description}
                 />

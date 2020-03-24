@@ -30,3 +30,7 @@ export const postPizza = (pizza) => {
         })
     }
 }
+
+export const addToCart = (id) => {
+    
+}
