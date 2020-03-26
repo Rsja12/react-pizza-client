@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { postPizza } from '../actions'
-import './Form.css'
+import '../styles/Form.css'
 
 export class Form extends Component {
 

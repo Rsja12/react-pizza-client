@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { addToCart } from '../actions'
-import './PizzaItem.css'
+import '../styles/PizzaItem.css'
     
     export class PizzaItem extends Component {
 

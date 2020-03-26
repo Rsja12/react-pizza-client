@@ -6,7 +6,7 @@ import About from './About'
 import Menu from './Menu'
 import Cart from '../components/Cart'
 import FormParent from './FormParent'
-import './App.css'
+import '../styles/App.css'
 
 const App = () => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home.css'
+import '../styles/Home.css'
 import Navigation from '../components/Navigation'
 import HomeText from '../components/HomeText'
 
