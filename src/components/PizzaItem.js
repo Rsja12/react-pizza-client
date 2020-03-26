@@ -14,7 +14,7 @@ import '../styles/PizzaItem.css'
 
     render() {
         console.log(this.props)
-        const { name, description, price } =  this.props
+        const { name, description, price } =  this.props.pizza
         return (
             <div className="ui container center aligned">
                 <div className="ui segment">

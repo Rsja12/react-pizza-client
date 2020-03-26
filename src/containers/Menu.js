@@ -14,13 +14,7 @@ export class Menu extends Component {
 
     renderMenu() {
         return this.props.menu.map( pizza => {
-            return <PizzaItem 
-                    key={pizza.id}
-                    id={pizza.id}
-                    name={pizza.name}
-                    description={pizza.description}
-                    price={pizza.price}
-                />
+            return <PizzaItem pizza={pizza} key={pizza.id} />
         }   )
     }
 
