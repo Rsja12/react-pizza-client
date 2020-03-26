@@ -16,4 +16,3 @@ ReactDOM.render(
     document.querySelector('#root')
 )
 
-//Test git push to new branch

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Navigation.css'
+import '../styles/Navigation.css'
 import { NavLink } from 'react-router-dom'
 
 const Navigation = () => {
@@ -10,6 +10,9 @@ const Navigation = () => {
                 <NavLink to="/about" exact className="item">About</NavLink>
                 <NavLink to="/pizzas" exact className="item">Menu</NavLink>
                 <NavLink to="/pizzas/new" exact className="item">Make Your Own</NavLink>
+                <div className="ui right inverted secondary pointing menu">
+                    <NavLink to="/cart" exact className="item cart"><i className="shopping cart icon"></i>Cart </NavLink>    
+                </div>
             </div>
         </div>
     )

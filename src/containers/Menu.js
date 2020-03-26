@@ -14,11 +14,7 @@ export class Menu extends Component {
 
     renderMenu() {
         return this.props.menu.map( pizza => {
-            return <PizzaItem 
-                    key={pizza.id}
-                    name={pizza.name}
-                    description={pizza.description}
-                />
+            return <PizzaItem pizza={pizza} key={pizza.id} />
         }   )
     }
 
@@ -26,6 +22,7 @@ export class Menu extends Component {
         return (
             <div>
                 <Navigation />
+                <h1 style={{ textAlign: 'center' }}>House Pizzas</h1>
                 { this.renderMenu() }
             </div>
         )
@@ -36,4 +33,4 @@ const mapStateToProps = state => ({
     menu: state.menu
 })
 
-export default connect(mapStateToProps, { fetchMenu: fetchMenu  })(Menu)
+export default connect(mapStateToProps, { fetchMenu })(Menu)

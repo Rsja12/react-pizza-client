@@ -1,5 +1,5 @@
 import React from 'react'
-import './HomeText.css'
+import '../styles/HomeText.css'
 
 const HomeText = () => {
 

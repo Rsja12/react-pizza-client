@@ -2,13 +2,15 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { postPizza } from '../actions'
-import './Form.css'
+// import { addToCart } from '../actions'
+import '../styles/Form.css'
 
 export class Form extends Component {
 
     state = {
         name: '',
-        description: ''
+        description: '',
+        price: 8.99 
     }
 
     handleName = e => {
@@ -45,6 +47,7 @@ export class Form extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.postPizza(this.state)
+        console.log(this.state)
         this.setState({
             name: ''
         })
@@ -300,7 +303,7 @@ export class Form extends Component {
                 </div>
 
                 <div>
-                    <button className="ui blue button" type="submit">Make Pizza</button>
+                    <button style={{ backgroundColor: '#F57C00', color: 'white' }} className="ui button" type="submit">Add To Cart</button>
                 </div>
 
             </form>
@@ -309,4 +312,4 @@ export class Form extends Component {
     }
 }
 
-export default connect(null, { postPizza: postPizza })(Form)
+export default connect(null, { postPizza })(Form)
