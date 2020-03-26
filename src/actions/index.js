@@ -37,3 +37,10 @@ export const addToCart = (pizza) => {
         payload: pizza 
     }
 }
+
+export const removeFromCart = (pizza) => {
+    return {
+        type: 'REMOVE_FROM_CART',
+        payload: pizza
+    }
+}
