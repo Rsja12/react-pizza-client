@@ -39,3 +39,9 @@ const CartList = () => {
 }
 
 export default CartList
+
+// Go through array and display each pizza 
+// MapStateToProps ?
+// mapDispatchToProps for removing pizza from cart
+
+
