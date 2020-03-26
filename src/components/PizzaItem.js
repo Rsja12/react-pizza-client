@@ -13,12 +13,14 @@ import '../styles/PizzaItem.css'
     // }
 
     render() {
-        const { name, description } =  this.props
+        console.log(this.props)
+        const { name, description, price } =  this.props
         return (
             <div className="ui container center aligned">
                 <div className="ui segment">
                     <div className="header">{name}</div>
                     <div>{description}</div>
+                    <div>{price}</div>
                     <button 
                         // onClick={ this.handleBtn }
                         className="button" 

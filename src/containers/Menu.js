@@ -19,6 +19,7 @@ export class Menu extends Component {
                     id={pizza.id}
                     name={pizza.name}
                     description={pizza.description}
+                    price={pizza.price}
                 />
         }   )
     }
