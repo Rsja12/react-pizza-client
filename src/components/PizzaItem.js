@@ -6,11 +6,10 @@ import '../styles/PizzaItem.css'
     
     export class PizzaItem extends Component {
 
-    // Figure this the fuck out!!!
-    // handleBtn = () => {
-    //    console.log(`I am pizza # ${this.props.name}`)
-    //    this.props.addToCart(this.props.id)
-    // }
+    handleClick = () => {
+       console.log(`I am this pie obj: ${this.props}`)
+       this.props.addToCart(this.props.pizza)
+    }
 
     render() {
         console.log(this.props)
@@ -22,7 +21,7 @@ import '../styles/PizzaItem.css'
                     <div>{description}</div>
                     <div>{price}</div>
                     <button 
-                        // onClick={ this.handleBtn }
+                        onClick={ this.handleClick }
                         className="button" 
                         type="submit">add to cart
                     </button>
@@ -32,7 +31,11 @@ import '../styles/PizzaItem.css'
     }
 }
 
-export default connect(null, { addToCart })(PizzaItem)
+const mapStateToProps = state => ({
+    cart: state.cart
+})
+
+export default connect(mapStateToProps, { addToCart })(PizzaItem)
 
 
 
