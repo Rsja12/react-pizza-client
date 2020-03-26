@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Navigation from '../components/Navigation'
 import Form from '../components/Form'
 
-export class FormParent extends Component {
+export class MakeYourOwn extends Component {
 
     render() {
         return (
@@ -14,4 +14,4 @@ export class FormParent extends Component {
     }
 }
 
-export default FormParent
+export default MakeYourOwn
