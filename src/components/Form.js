@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { addToCart } from '../actions'
+import { postPizza } from '../actions'
+// import { addToCart } from '../actions'
 import '../styles/Form.css'
 
 export class Form extends Component {
 
     state = {
         name: '',
-        description: ''
+        description: '',
+        price: 8.99 
     }
 
     handleName = e => {
@@ -44,7 +46,7 @@ export class Form extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.props.addToCart(this.state)
+        this.props.postPizza(this.state)
         console.log(this.state)
         this.setState({
             name: ''
@@ -310,4 +312,4 @@ export class Form extends Component {
     }
 }
 
-export default connect(null, { addToCart })(Form)
+export default connect(null, { postPizza })(Form)
