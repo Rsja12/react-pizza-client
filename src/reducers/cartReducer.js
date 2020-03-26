@@ -1,12 +1,10 @@
-export default ( state = { name: '', description: [] }, action ) => {
+export default ( pizza = { name: '', description: [] }, action ) => {
 
     switch( action.type ) {
         case 'ADD_TO_CART':
-            
-            debugger
             return action.payload
         default:
-            return state 
+            return pizza 
     }
 
 }   
