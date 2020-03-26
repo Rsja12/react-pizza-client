@@ -10,7 +10,7 @@ export default ( state = [], action ) => {
             // filters out obj with index === firstMatch
             return state.filter( (obj, idx) => idx !== firstMatch )
         default: 
-            return pizza 
+            return state 
     }
 
 }   

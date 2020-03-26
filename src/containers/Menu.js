@@ -33,4 +33,4 @@ const mapStateToProps = state => ({
     menu: state.menu
 })
 
-export default connect(mapStateToProps, { fetchMenu: fetchMenu  })(Menu)
+export default connect(mapStateToProps, { fetchMenu })(Menu)
