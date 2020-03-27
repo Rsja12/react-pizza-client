@@ -7,7 +7,7 @@ import '../styles/PizzaItem.css'
     export class PizzaItem extends Component {
 
     handleClick = () => {
-       console.log(`I am this pie obj: ${this.props}`)
+       console.log(`I am this pie obj: ${this.props.pizza}`)
        this.props.addToCart(this.props.pizza)
     }
 
