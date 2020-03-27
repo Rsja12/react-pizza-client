@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import Navigation from './Navigation'
 import CartList from './CartList'
+import Pricing from './Pricing'
 import '../styles/Cart.css'
 
 export class Cart extends Component {
@@ -21,6 +22,7 @@ export class Cart extends Component {
                 <div className="cart-container"> 
                     { this.renderCart() }   
                 </div>
+                <Pricing cart={this.props.cart}/>
             </div>
         )
     }
