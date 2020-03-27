@@ -4,15 +4,15 @@ import { connect } from 'react-redux'
 import { addToCart } from '../actions'
 import '../styles/PizzaItem.css'
     
-    export class PizzaItem extends Component {
+export class PizzaItem extends Component {
 
     handleClick = () => {
-       console.log(`I am this pie obj: ${this.props.pizza}`)
+    //    console.log(`I am this pie obj: ${this.props.pizza}`)
        this.props.addToCart(this.props.pizza)
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         const { name, description, price } =  this.props.pizza
         return (
             <div className="ui container center aligned">
