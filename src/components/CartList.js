@@ -1,47 +1,16 @@
 import React from 'react'
 
-
-const CartList = () => {
+const CartList = props => {
+     const { name, description, price } = props.pizza
     return (
-        <div className="cart-list">
-            <div className="ui middle aligned divided list">
-                <div className="item">
-                    <div className="right floated content">
-                        <div className="ui button">Add</div>
-                    </div>
-                        <img className="ui avatar image" src="/images/avatar2/small/lena.png"></img>
-                    <div className="content">Lena</div>
-                </div>
-                <div className="item">
-                    <div className="right floated content">
-                        <div className="ui button">Add</div>
-                    </div>
-                        <img className="ui avatar image" src="/images/avatar2/small/lena.png"></img>
-                    <div className="content">Lena</div>
-                </div>
-                <div className="item">
-                    <div className="right floated content">
-                        <div className="ui button">Add</div>
-                    </div>
-                        <img className="ui avatar image" src="/images/avatar2/small/lena.png"></img>
-                    <div className="content">Lena</div>
-                </div>
-                <div className="item">
-                    <div className="right floated content">
-                        <div className="ui button">Add</div>
-                    </div>
-                        <img className="ui avatar image" src="/images/avatar2/small/lena.png"></img>
-                    <div className="content">Lena</div>
-                </div>
+        <div className="ui container center aligned">
+            <div className="ui segment">
+                <div className="header">{name}</div>
+                <div>{description}</div>
+                <div>{price}</div>
             </div>
         </div>
     )
 }
 
 export default CartList
-
-// Go through array and display each pizza 
-// MapStateToProps ?
-// mapDispatchToProps for removing pizza from cart
-
-
