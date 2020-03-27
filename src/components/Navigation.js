@@ -1,8 +1,9 @@
 import React from 'react'
 import '../styles/Navigation.css'
 import { NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
 
-const Navigation = () => {
+const Navigation = props => {
     return (
         <div className="ui inverted segment">
             <div className="ui inverted secondary pointing menu">
@@ -11,12 +12,16 @@ const Navigation = () => {
                 <NavLink to="/pizzas" exact className="item">Menu</NavLink>
                 <NavLink to="/pizzas/new" exact className="item">Make Your Own</NavLink>
                 <div className="ui right inverted secondary pointing menu">
-                    <NavLink to="/cart" exact className="item cart"><i className="shopping cart icon"></i>Cart </NavLink>    
+                    <NavLink to="/cart" exact className="item cart"><i className="shopping cart icon"></i>Cart ( {props.cart.length} ) </NavLink>    
                 </div>
             </div>
         </div>
     )
 }
 
-export default Navigation
+const mapStateToProps = state => ({
+    cart: state.cart
+})
+
+export default connect(mapStateToProps)(Navigation)
 
