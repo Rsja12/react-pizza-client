@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import Navigation from './Navigation'
 import CartList from './CartList'
+import '../styles/Cart.css'
 
 export class Cart extends Component {
 
@@ -17,7 +18,9 @@ export class Cart extends Component {
         return (
             <div>
                 <Navigation />
-                { this.renderCart() }
+                <div className="cart-container"> 
+                    { this.renderCart() }   
+                </div>
             </div>
         )
     }
