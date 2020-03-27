@@ -1,20 +1,32 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import Navigation from './Navigation'
 import CartList from './CartList'
 
-const Cart = () => {
-    return (
-        <div>
-            <Navigation />
-            <CartList />
-        </div>
-    )
+export class Cart extends Component {
+
+    renderCart() {
+        return this.props.cart.map( pizza => {
+            return <CartList pizza={pizza}  />
+        } )
+    }
+
+    render() {
+        console.log(this.props.cart)
+        return (
+            <div>
+                <Navigation />
+                { this.renderCart() }
+            </div>
+        )
+    }
 }
 
-export default Cart
+const mapStateToProps = state => ({
+    cart: state.cart
+})
 
-// Use mapStateToProps to access cart
-// Pass it to CartList?
+export default connect(mapStateToProps)(Cart)
 
 
