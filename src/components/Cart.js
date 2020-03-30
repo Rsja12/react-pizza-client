@@ -10,7 +10,7 @@ export class Cart extends Component {
 
     renderCart() {
         if ( this.props.cart.length === 0 ) {
-            return <div>Empty</div>
+            return <div className="cart-msg">Your cart is currently empty</div>
         } else {
             // figure out key
             return this.props.cart.map( pizza => <CartList pizza={pizza} /> )
