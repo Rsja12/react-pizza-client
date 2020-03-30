@@ -1,6 +1,6 @@
 .cart-container {
     width: 750px;
-    height: 400px;
+    max-height: 450px;
     margin: 0 auto;
     overflow: auto;
 
@@ -8,10 +8,6 @@
     border-radius: 5px;
 
     padding: 2%;
-
-    /* Figure out how to make only this div scrollable so it doesnt run into pricing div */
-
-
 }
 
 .description, .content {
