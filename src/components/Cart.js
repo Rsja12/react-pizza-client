@@ -5,6 +5,7 @@ import { removeFromCart } from '../actions'
 import Navigation from './Navigation'
 import CartList from './CartList'
 import Pricing from './Pricing'
+import Checkout from './Checkout'
 import '../styles/Cart.css'
 
 export class Cart extends Component {
@@ -26,6 +27,7 @@ export class Cart extends Component {
                     { this.renderCart() }   
                 </div>
                 <Pricing cart={this.props.cart} />
+                <Checkout />
             </div>
         )
     }
