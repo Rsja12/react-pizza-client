@@ -1,15 +1,18 @@
 .price {
     width: 750px;
-    margin: 0 auto;
     margin-top: 2%;
-    overflow: auto;
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
 
     padding: 2%;
 
-    bottom: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 1%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);    
+
 }
 
 
