@@ -9,7 +9,7 @@
 
     position: absolute;
     left: 50%;
-    bottom: 4%;
+    bottom: 8%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);    
 
