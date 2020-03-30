@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { postPizza } from '../actions'
-// import { addToCart } from '../actions'
+// import { postPizza } from '../actions'
+import { addToCart } from '../actions'
 import '../styles/Form.css'
 
 export class Form extends Component {
@@ -46,7 +46,7 @@ export class Form extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.props.postPizza(this.state)
+        this.props.addToCart(this.state)
         console.log(this.state)
         this.setState({
             name: ''
@@ -312,4 +312,4 @@ export class Form extends Component {
     }
 }
 
-export default connect(null, { postPizza })(Form)
+export default connect(null, { addToCart })(Form)
