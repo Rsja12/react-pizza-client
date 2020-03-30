@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import { removeFromCart } from '../actions'
 import Navigation from './Navigation'
 import CartList from './CartList'
 import Pricing from './Pricing'
@@ -13,7 +14,7 @@ export class Cart extends Component {
             return <div className="cart-msg">Your cart is currently empty</div>
         } else {
             // figure out key
-            return this.props.cart.map( pizza => <CartList pizza={pizza} /> )
+            return this.props.cart.map( pizza => <CartList pizza={pizza} remove={this.props.removeFromCart} /> )
         }
     }
 
@@ -34,6 +35,6 @@ const mapStateToProps = state => ({
     cart: state.cart
 })
 
-export default connect(mapStateToProps)(Cart)
+export default connect(mapStateToProps, { removeFromCart })(Cart)
 
 
