@@ -27,7 +27,7 @@ export class Cart extends Component {
                     { this.renderCart() }   
                 </div>
                 <Pricing cart={this.props.cart} />
-                <Checkout />
+                <Checkout cart={this.props.cart}/>
             </div>
         )
     }

@@ -2,11 +2,18 @@ import React from 'react'
 
 import '../styles/Checkout.css'
 
-const Checkout = () => {
+const Checkout = ({ cart }) => {
+    if (cart.length === 0) {
+        return (
+            <div className="checkout">
+                <button className="ui disabled button">Checkout</button>
+            </div>
+        )
+    } 
     return (
         <div className="checkout">
-            <button className="ui disabled button">Checkout</button>
-        </div>
+                <button className="ui orange button">Checkout</button>
+            </div>
     )
 }
 
