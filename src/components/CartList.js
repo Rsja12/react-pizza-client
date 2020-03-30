@@ -3,7 +3,7 @@ import React from 'react'
 import '../styles/Cart.css'
 
 const CartList = props => {
-    const { name, description, price } = props.pizza
+    const { name, description } = props.pizza
      
     return (
         <div className="ui middle aligned divided list">
@@ -12,7 +12,7 @@ const CartList = props => {
                     <div className="header">{name}</div>
                     <div className="description">{description}</div>
                 <div className="right floated content">
-                    <div>{price}</div>
+                    <button className="ui button">Remove</button>
                 </div>
                 </div>
             </div>

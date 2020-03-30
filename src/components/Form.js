@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-// import { postPizza } from '../actions'
 import { addToCart } from '../actions'
 import '../styles/Form.css'
+
+// Figure out how to keep naming convention when adding one of these pizzas to cart. Either Have only one name for multiple of these or a name for each different item.
+
 
 export class Form extends Component {
 
@@ -55,7 +57,7 @@ export class Form extends Component {
     }
 
     render() {
-        const { name, description } = this.state 
+        const { description } = this.state 
         return (
             <div className="ui container">
                 <form id="form" onSubmit={this.handleSubmit} className="ui form">
