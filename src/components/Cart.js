@@ -9,22 +9,22 @@ import '../styles/Cart.css'
 export class Cart extends Component {
 
     renderCart() {
-        return this.props.cart.map( pizza => {
-            return <CartList pizza={pizza}  />
-        } )
+        if ( this.props.cart.length === 0 ) {
+            return <div>Empty</div>
+        } else {
+            // figure out key
+            return this.props.cart.map( pizza => <CartList pizza={pizza} /> )
+        }
     }
 
-    
-
     render() {
-        console.log(this.props.cart)
         return (
             <div>
                 <Navigation />
                 <div className="cart-container"> 
                     { this.renderCart() }   
-                    </div>
-                <Pricing cart={this.props.cart}/>
+                </div>
+                <Pricing cart={this.props.cart} />
             </div>
         )
     }
