@@ -12,9 +12,15 @@ const Checkout = ({ cart }) => {
     } 
     return (
         <div className="checkout">
-                <button className="ui orange button">Checkout</button>
+                <button 
+                onClick={ () => {
+                    alert("Thanks! We'll have your order ready for pickup in about 15 min!")
+                    window.location.reload(false)
+                } }
+                className="ui orange button">Checkout</button>
             </div>
     )
 }
 
 export default Checkout
+
