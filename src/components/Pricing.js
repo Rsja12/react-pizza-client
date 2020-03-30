@@ -1,9 +1,7 @@
-// component at bottom of cart route 
-// displays subtotal, tax and total and does the calculation of price for current items in cart
+import React, { Component } from 'react'
 
 import '../styles/Pricing.css'
-
-import React, { Component } from 'react'
+import '../styles/Cart.css'
 
 export class Pricing extends Component {
 
@@ -57,25 +55,3 @@ export class Pricing extends Component {
 }
 
 export default Pricing
-
-
-// const Pricing = (props) => {
-//     console.log(props.pizza)
-//     return (
-//         <div className="price">
-//             <div className="ui middle aligned divided list">
-//             <div className="item">
-//                 <div className="content">
-//                     <div className="header">Subtotal</div>
-//                     <div></div>
-//                 <div className="right floated content">
-//                     <div></div>
-//                 </div>
-//                 </div>
-//             </div>
-//         </div>
-//         </div>
-//     )
-// }
-
-// export default Pricing
