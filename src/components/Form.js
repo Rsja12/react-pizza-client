@@ -8,16 +8,16 @@ import '../styles/Form.css'
 export class Form extends Component {
 
     state = {
-        name: '',
+        name: 'Make Your Own',
         description: '',
         price: 8.99 
     }
 
-    handleName = e => {
-        this.setState({
-            name: e.target.value 
-        })
-    }
+    // handleName = e => {
+    //     this.setState({
+    //         name: e.target.value 
+    //     })
+    // }
 
     handleToppings = e => {
         let topping = e.target
@@ -292,7 +292,7 @@ export class Form extends Component {
                         </div>
                     </div>
 
-                <div style={{ marginTop: 50 }}>
+                {/* <div style={{ marginTop: 50 }}>
                     <input 
                     type="text"
                     placeholder="Name your pizza"
@@ -300,7 +300,7 @@ export class Form extends Component {
                     onChange={ this.handleName }
                     required
                     />
-                </div>
+                </div> */}
 
                 <div>
                     <button style={{ backgroundColor: '#F57C00', color: 'white' }} className="ui button" type="submit">Add To Cart</button>
