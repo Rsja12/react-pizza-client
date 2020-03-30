@@ -9,7 +9,7 @@ const Pricing = (props) => {
     console.log(props.pizza)
     return (
         <div className="price">
-            TESTING
+            
         </div>
     )
 }

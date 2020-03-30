@@ -14,6 +14,8 @@ export class Cart extends Component {
         } )
     }
 
+    
+
     render() {
         console.log(this.props.cart)
         return (
@@ -21,7 +23,7 @@ export class Cart extends Component {
                 <Navigation />
                 <div className="cart-container"> 
                     { this.renderCart() }   
-                </div>
+                    </div>
                 <Pricing cart={this.props.cart}/>
             </div>
         )
