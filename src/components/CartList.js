@@ -1,47 +1,30 @@
-import React from 'react'
+import React, { Component } from 'react'
 
+import '../styles/Cart.css'
 
-const CartList = () => {
-    return (
-        <div className="cart-list">
+export class CartList extends Component {
+
+    render() {
+        const { name, description } = this.props.pizza 
+        return (
             <div className="ui middle aligned divided list">
                 <div className="item">
+                    <div className="content">
+                        <div className="header">{name}</div>
+                        <div className="description">{description}</div>
                     <div className="right floated content">
-                        <div className="ui button">Add</div>
+                        <button 
+                        onClick={ () => this.props.remove(this.props.pizza) }
+                        className="ui button">Remove</button>
                     </div>
-                        <img className="ui avatar image" src="/images/avatar2/small/lena.png"></img>
-                    <div className="content">Lena</div>
-                </div>
-                <div className="item">
-                    <div className="right floated content">
-                        <div className="ui button">Add</div>
                     </div>
-                        <img className="ui avatar image" src="/images/avatar2/small/lena.png"></img>
-                    <div className="content">Lena</div>
-                </div>
-                <div className="item">
-                    <div className="right floated content">
-                        <div className="ui button">Add</div>
-                    </div>
-                        <img className="ui avatar image" src="/images/avatar2/small/lena.png"></img>
-                    <div className="content">Lena</div>
-                </div>
-                <div className="item">
-                    <div className="right floated content">
-                        <div className="ui button">Add</div>
-                    </div>
-                        <img className="ui avatar image" src="/images/avatar2/small/lena.png"></img>
-                    <div className="content">Lena</div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default CartList
 
-// Go through array and display each pizza 
-// MapStateToProps ?
-// mapDispatchToProps for removing pizza from cart
 
 
