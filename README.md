@@ -1,7 +1,7 @@
-**React Pizza**
+***React Pizza***
 ---------
 
-This is a simple application where users can create different pizzas.
+
 
 #Get Started
 
