@@ -3,6 +3,7 @@ import React from 'react'
 import '../styles/Checkout.css'
 
 const Checkout = ({ cart }) => {
+
     if (cart.length === 0) {
         return (
             <div className="checkout">
@@ -22,5 +23,6 @@ const Checkout = ({ cart }) => {
     )
 }
 
-export default Checkout
+export default Checkout 
+
 
