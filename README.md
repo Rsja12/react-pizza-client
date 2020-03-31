@@ -13,7 +13,7 @@ React | Redux | Thunk | Semantic UI
 **Screenshots**
 --------
 ![](/images/About.png)
-![](/images/MakeYourOwm.png)
+![](/images/MakeYourOwn.png)
 ![](/images/EmptyCart.png)
 ![](/images/Cart.png)
 
