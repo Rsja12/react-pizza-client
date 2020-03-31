@@ -12,7 +12,7 @@ React | Redux | Thunk | Semantic UI
 
 **Screenshots**
 --------
-![](react-pizza-client/images/About.png)
+![](/images/About.png)
 
 #Get Started
 
