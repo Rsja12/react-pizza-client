@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import history from '../history'
 import { addToCart } from '../actions'
 import '../styles/PizzaItem.css'
     
@@ -8,6 +9,7 @@ export class PizzaItem extends Component {
 
     handleClick = () => {
        this.props.addToCart(this.props.pizza)
+       history.push('/cart')
     }
 
     render() {

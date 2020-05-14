@@ -1,3 +1,6 @@
+
+
+
 export const fetchMenu = () => {
     return (dispatch) => {
         fetch('http://localhost:3000/pizzas')
@@ -32,12 +35,10 @@ export const postPizza = (pizza) => {
 }
 
 export const addToCart = (pizza) => {
-    
     return {
         type: 'ADD_TO_CART',
         payload: pizza 
     }
-
 }
 
 export const removeFromCart = (pizza) => {

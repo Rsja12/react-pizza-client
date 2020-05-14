@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+import history from '../history'
 import { addToCart } from '../actions'
 import '../styles/Form.css'
 
@@ -54,6 +55,7 @@ export class Form extends Component {
             name: ''
         })
         this.clearBoxes()
+        history.push('/cart')
     }
 
     render() {
