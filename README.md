@@ -1,6 +1,6 @@
 **React Pizza**
 ---------
-React Pizza is a simple e-commerce web application where users can choose pizzas from a menu and/or create their own, and afterwards add them to a shopping cart. The shopping cart component allows the user to edit the cart and see the pricing update in real time.
+React Pizza is an e-commerce web application where users can choose pizzas from a menu and/or create their own, and afterwards add them to a shopping cart. The shopping cart component allows the user to edit the cart and see the pricing update in real time.
 
 **Motivation**
 ---------
@@ -19,7 +19,7 @@ React | Redux | Thunk | Semantic UI
 
 **Installation**
 ---------
-This is only the frontend side of this project. The backend can be found at https://github.com/Rsja12/react-pizza-api. Clone down both this repo and the backend repo down to your machine. After following the README for the backend repo, cd into this `react-pizza-client` and in the terminal run `yarn start`.
+This is only the frontend side of this project. The backend can be found at https://github.com/Rsja12/react-pizza-api. Clone down both this repo and the backend repo down to your machine. After following the README for the backend repo, cd into `react-pizza-client` and in the terminal run `yarn start`.
 
 **License**
 ---------
