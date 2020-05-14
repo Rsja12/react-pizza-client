@@ -1,6 +1,7 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Router, Route } from 'react-router-dom'
 
+import history from '../history'
 import Home from './Home'
 import About from './About'
 import Menu from './Menu'
@@ -10,7 +11,7 @@ import '../styles/App.css'
 
 const App = () => {
     return (
-        <Router>
+        <Router history={history}>
             <div>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
