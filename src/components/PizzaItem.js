@@ -23,7 +23,8 @@ export class PizzaItem extends Component {
                     <button 
                         onClick={ this.handleClick }
                         className="button" 
-                        type="submit">add to cart
+                        type="submit">
+                            add to cart
                     </button>
                 </div>
             </div>
