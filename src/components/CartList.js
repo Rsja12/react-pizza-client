@@ -15,7 +15,9 @@ export class CartList extends Component {
                     <div className="right floated content">
                         <button 
                         onClick={ () => this.props.remove(this.props.pizza) }
-                        className="ui button">Remove</button>
+                        className="ui icon button">
+                            <i className='minus icon'></i>
+                        </button>
                     </div>
                     </div>
                 </div>
