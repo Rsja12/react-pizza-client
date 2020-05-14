@@ -32,10 +32,12 @@ export const postPizza = (pizza) => {
 }
 
 export const addToCart = (pizza) => {
+    
     return {
         type: 'ADD_TO_CART',
         payload: pizza 
     }
+
 }
 
 export const removeFromCart = (pizza) => {
