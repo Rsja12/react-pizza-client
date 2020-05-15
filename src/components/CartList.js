@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
+import { increaseQuantity } from '../actions'
 import '../styles/Cart.css'
 
 export class CartList extends Component {
 
     render() {
-        const { name, description } = this.props.pizza 
+        console.log(this.props)
+        const { name, description, quantity } = this.props.pizza 
         return (
             <div className="ui middle aligned divided list">
                 <div className="item">
@@ -17,9 +20,10 @@ export class CartList extends Component {
                         onClick={ () => this.props.remove(this.props.pizza) }
                         className="ui icon button">
                             <i className='minus icon'></i>
-                        </button>
+                        </button> 
+                        { quantity }
                         <button 
-                        onClick={ () => this.props.remove(this.props.pizza) }
+                        onClick={ () => this.props.increaseQuantity(this.props.pizza) }
                         className="ui icon button">
                             <i className='plus icon'></i>
                         </button>
@@ -31,7 +35,7 @@ export class CartList extends Component {
     }
 }
 
-export default CartList
+export default connect(null, { increaseQuantity })(CartList)
 
 
 

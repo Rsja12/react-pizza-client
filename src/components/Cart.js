@@ -34,7 +34,7 @@ export class Cart extends Component {
 }
 
 const mapStateToProps = state => ({
-    cart: state.cart
+    cart: Object.values(state.cart)
 })
 
 export default connect(mapStateToProps, { removeFromCart })(Cart)

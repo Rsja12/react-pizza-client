@@ -47,3 +47,10 @@ export const removeFromCart = (pizza) => {
         payload: pizza
     }
 }
+
+export const increaseQuantity = pizza => {
+    return {
+        type: 'INC_QTY',
+        payload: pizza 
+    }
+}
