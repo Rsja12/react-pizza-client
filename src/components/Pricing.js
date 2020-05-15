@@ -1,13 +1,26 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import '../styles/Pricing.css'
 import '../styles/Cart.css'
 
+
 export class Pricing extends Component {
 
+    numOfItems = () => {
+        if( this.props.cart.length === 0 ) {
+            return 0
+        } else if ( this.props.cart.length === 1 ) {
+            const [ pizza ] = this.props.cart
+            return pizza.quantity
+        } else {
+            const items = this.props.cart.reduce( (a, b) => a.quantity + b.quantity )
+            return items
+        }
+    }
 
     calcSubtotal = () => {
-        return (8.99 * this.props.cart.length).toFixed(2)
+        return (8.99 * this.numOfItems() ).toFixed(2)
     }
 
     calcTax = () => {
@@ -54,4 +67,8 @@ export class Pricing extends Component {
     }
 }
 
-export default Pricing
+const mapStateToProps = state => ({
+    cart: Object.values(state.cart)
+})
+
+export default connect(mapStateToProps)(Pricing)
