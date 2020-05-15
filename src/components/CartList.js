@@ -18,6 +18,11 @@ export class CartList extends Component {
                         className="ui icon button">
                             <i className='minus icon'></i>
                         </button>
+                        <button 
+                        onClick={ () => this.props.remove(this.props.pizza) }
+                        className="ui icon button">
+                            <i className='plus icon'></i>
+                        </button>
                     </div>
                     </div>
                 </div>
