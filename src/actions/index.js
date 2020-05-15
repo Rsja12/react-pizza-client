@@ -54,3 +54,10 @@ export const increaseQuantity = pizza => {
         payload: pizza 
     }
 }
+
+export const decreaseQuantity = pizza => {
+    return {
+        type: 'DEC_QTY',
+        payload: pizza
+    }
+}

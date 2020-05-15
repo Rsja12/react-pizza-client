@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { increaseQuantity } from '../actions'
+import { increaseQuantity, decreaseQuantity } from '../actions'
 import '../styles/Cart.css'
 
 export class CartList extends Component {
@@ -17,7 +17,7 @@ export class CartList extends Component {
                         <div className="description">{description}</div>
                     <div className="right floated content">
                         <button 
-                        onClick={ () => this.props.remove(this.props.pizza) }
+                        onClick={ () => this.props.decreaseQuantity(this.props.pizza) }
                         className="ui icon button">
                             <i className='minus icon'></i>
                         </button> 
@@ -35,7 +35,7 @@ export class CartList extends Component {
     }
 }
 
-export default connect(null, { increaseQuantity })(CartList)
+export default connect(null, { increaseQuantity, decreaseQuantity })(CartList)
 
 
 

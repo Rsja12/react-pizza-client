@@ -16,6 +16,17 @@ export default ( state = {}, action ) => {
                     quantity: pizzaObj.quantity + 1
                 }
             }
+        case 'DEC_QTY':
+            if( pizzaObj.quantity > 1 ) {
+                return {
+                    ...state,
+                    [pizzaObj.id]: {
+                        ...pizzaObj,
+                        quantity: pizzaObj.quantity - 1
+                    }
+                } 
+            }
+            return _.omit( state, pizzaObj.id )
         // case 'ADD_TO_CART':            
         //     // Returns a copy of the current array plus whatever object is being added 
         //     const pizzaObj = action.payload
