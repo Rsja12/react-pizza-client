@@ -33,7 +33,7 @@ export class PizzaItem extends Component {
 }
 
 const mapStateToProps = state => ({
-    cart: Object.values(state.cart)
+    cart: state.cart
 })
 
 export default connect(mapStateToProps, { addToCart })(PizzaItem)
