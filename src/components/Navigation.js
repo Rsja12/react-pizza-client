@@ -6,11 +6,21 @@ import { connect } from 'react-redux'
 export class Navigation extends React.Component {
 
     numOfItems = () => {
-        
+        if( this.props.cart.length === 0 ) {
+            return 0
+        } else if ( this.props.cart.length === 1 ) {
+            const [ pizza ] = this.props.cart
+            return pizza.quantity
+            // console.log(this.props.cart)
+        } else {
+            const items = this.props.cart.reduce( (a, b) => a.quantity + b.quantity )
+            return items
+        }
+
     }
 
     render() {
-        console.log(this.props.cart)
+
         return (
             <div className="ui inverted segment">
                 <div className="ui inverted secondary pointing menu">
@@ -19,7 +29,7 @@ export class Navigation extends React.Component {
                     <NavLink to="/pizzas" exact className="item">Menu</NavLink>
                     <NavLink to="/pizzas/new" exact className="item">Make Your Own</NavLink>
                     <div className="ui right inverted secondary pointing menu">
-                        <NavLink to="/cart" exact className="item cart"><i className="shopping cart icon"></i>Cart ( {this.props.cart.length}  ) </NavLink>    
+                        <NavLink to="/cart" exact className="item cart"><i className="shopping cart icon"></i>Cart ( { this.numOfItems() }  ) </NavLink>    
                     </div>
                 </div>
             </div>

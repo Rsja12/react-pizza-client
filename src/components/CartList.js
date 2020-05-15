@@ -7,7 +7,6 @@ import '../styles/Cart.css'
 export class CartList extends Component {
 
     render() {
-        console.log(this.props)
         const { name, description, quantity } = this.props.pizza 
         return (
             <div className="ui middle aligned divided list">
