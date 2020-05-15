@@ -14,8 +14,7 @@ export class Cart extends Component {
         if ( this.props.cart.length === 0 ) {
             return <div className="cart-msg">Your cart is currently empty</div>
         } else {
-            // figure out key
-            return this.props.cart.map( pizza => <CartList pizza={pizza} remove={this.props.removeFromCart} /> )
+            return this.props.cart.map( pizza => <CartList key={pizza.id} pizza={pizza} remove={this.props.removeFromCart} /> )
         }
     }
 
