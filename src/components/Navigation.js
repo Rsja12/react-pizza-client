@@ -5,14 +5,17 @@ import { connect } from 'react-redux'
 
 export class Navigation extends React.Component {
 
-    numOfItems = () => {
+    numOfItems() {
         if( this.props.cart.length === 0 ) {
             return 0
         } else if ( this.props.cart.length === 1 ) {
             const [ pizza ] = this.props.cart
             return pizza.quantity
         } else {
-            const items = this.props.cart.reduce( (a, b) => a.quantity + b.quantity )
+            const initValue = 0
+            const items = this.props.cart.reduce( (acc, current) => {
+                return acc + current.quantity
+            }, initValue )
             return items
         }
 
