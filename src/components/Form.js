@@ -48,7 +48,6 @@ export class Form extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.addToCart(this.state)
-        console.log(this.state)
         this.setState({
             name: ''
         })
