@@ -11,7 +11,6 @@ export class Navigation extends React.Component {
         } else if ( this.props.cart.length === 1 ) {
             const [ pizza ] = this.props.cart
             return pizza.quantity
-            // console.log(this.props.cart)
         } else {
             const items = this.props.cart.reduce( (a, b) => a.quantity + b.quantity )
             return items

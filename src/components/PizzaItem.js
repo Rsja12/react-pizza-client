@@ -14,6 +14,7 @@ export class PizzaItem extends Component {
 
     render() {
         const { name, description, price } =  this.props.pizza
+        console.log(typeof price)
         return (
             <div className="ui container center aligned">
                 <div className="ui segment">

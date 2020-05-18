@@ -14,8 +14,10 @@ export class Pricing extends Component {
             const [ pizza ] = this.props.cart
             return pizza.quantity
         } else {
-            const items = this.props.cart.reduce( (a, b) => a.quantity + b.quantity )
-            return items
+            // const items = this.props.cart.reduce( (a, b) => a.quantity + b.quantity )
+            // debugger
+            // return items
+            return 10
         }
     }
 
