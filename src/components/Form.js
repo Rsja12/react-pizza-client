@@ -10,7 +10,7 @@ export class Form extends Component {
     state = {
         name: '',
         description: '',
-        price: 8.99,
+        price: '8.99',
         quantity: null 
     }
 
