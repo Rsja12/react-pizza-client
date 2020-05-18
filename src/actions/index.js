@@ -1,6 +1,3 @@
-
-
-
 export const fetchMenu = () => {
     return (dispatch) => {
         fetch('http://localhost:3000/pizzas')
