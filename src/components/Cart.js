@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { removeFromCart } from '../redux/actions'
-import Navigation from './Navigation'
 import CartList from './CartList'
 import Pricing from './Pricing'
 import Checkout from './Checkout'
@@ -21,7 +20,6 @@ export class Cart extends Component {
     render() {
         return (
             <div>
-                <Navigation />
                 <div className="cart-container"> 
                     { this.renderCart() }   
                 </div>
