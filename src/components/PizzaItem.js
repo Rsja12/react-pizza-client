@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import history from '../history'
-import { addToCart } from '../actions'
+import { addToCart } from '../redux/actions'
 import '../styles/PizzaItem.css'
     
 export class PizzaItem extends Component {
@@ -14,7 +14,6 @@ export class PizzaItem extends Component {
 
     render() {
         const { name, description, price } =  this.props.pizza
-        console.log(typeof price)
         return (
             <div className="ui container center aligned">
                 <div className="ui segment">

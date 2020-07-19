@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import history from '../history'
-import { addToCart } from '../actions'
+import { addToCart } from '../redux/actions'
 import '../styles/Form.css'
 
 export class Form extends Component {

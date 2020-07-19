@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { increaseQuantity, decreaseQuantity } from '../actions'
+import { increaseQuantity, decreaseQuantity } from '../redux/actions'
 import '../styles/Cart.css'
 
 export class CartList extends Component {

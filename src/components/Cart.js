@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { removeFromCart } from '../actions'
+import { removeFromCart } from '../redux/actions'
 import Navigation from './Navigation'
 import CartList from './CartList'
 import Pricing from './Pricing'
