@@ -18,7 +18,7 @@ const Checkout = ({ cart }) => {
                     alert("Thanks! We'll have your order ready for pickup in about 15 min!")
                     window.location.reload(false)
                 } }
-                className="ui orange button">Checkout</button>
+                className="button">Checkout</button>
             </div>
     )
 }

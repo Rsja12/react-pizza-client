@@ -5,69 +5,67 @@ import '../styles/Pricing.css'
 import '../styles/Cart.css'
 
 
-export class Pricing extends Component {
+const Pricing = ({ cart }) => {
 
-    numOfItems = () => {
-        if( this.props.cart.length === 0 ) {
+    const numOfItems = () => {
+        if( cart.length === 0 ) {
             return null
-        } else if ( this.props.cart.length === 1 ) {
-            const [ pizza ] = this.props.cart
+        } else if ( cart.length === 1 ) {
+            const [ pizza ] = cart
             return pizza.quantity
         } else {
             const initValue = 0
-            const items = this.props.cart.reduce( (acc, current) => {
+            const items = cart.reduce( (acc, current) => {
                 return acc + current.quantity
             }, initValue )
             return items
         }
     }
 
-    calcSubtotal = () => {
-        return (8.99 * this.numOfItems() ).toFixed(2)
+    const calcSubtotal = () => {
+        return (8.99 * numOfItems()).toFixed(2)
     }
 
-    calcTax = () => {
-        const jsCrazyNum = this.calcSubtotal() * 0.07
+    const calcTax = () => {
+        const jsCrazyNum = calcSubtotal() * 0.07
         return jsCrazyNum.toFixed(2)
     }
 
-    calcTotal = () => {
-        return (this.calcSubtotal() * 1.07).toFixed(2)
+    const calcTotal = () => {
+        return (calcSubtotal() * 1.07).toFixed(2)
     }
         
 
-    render() {
-        return (
-            <div className="price">
-                <div className="ui middle aligned divided list">
-                    <div className="item">
+    return (
+        <div className="price">
+            <div className="ui middle aligned divided list">
+                <div className="item">
 
-                        <div className="content">
-                            Subtotal
-                        </div>
-                        <div className="right floated content">
-                           ${ this.calcSubtotal() } 
-                        </div>
-
-                        <div className="content">
-                            Tax ( 7% )
-                        </div>
-                        <div className="right floated content">
-                           ${ this.calcTax() } 
-                        </div>
-
-                        <div className="content">
-                            Total
-                        </div>
-                        <div className="right floated content">
-                           ${ this.calcTotal() } 
-                        </div>
-
+                    <div className="content">
+                        Subtotal
                     </div>
+                    <div className="right floated content">
+                        ${ calcSubtotal() } 
+                    </div>
+
+                    <div className="content">
+                        Tax ( 7% )
+                    </div>
+                    <div className="right floated content">
+                        ${ calcTax() } 
+                    </div>
+
+                    <div className="content">
+                        Total
+                    </div>
+                    <div className="right floated content">
+                        ${ calcTotal() } 
+                    </div>
+
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 const mapStateToProps = state => ({
