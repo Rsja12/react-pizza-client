@@ -9,7 +9,7 @@ export class Pricing extends Component {
 
     numOfItems = () => {
         if( this.props.cart.length === 0 ) {
-            return 0
+            return null
         } else if ( this.props.cart.length === 1 ) {
             const [ pizza ] = this.props.cart
             return pizza.quantity

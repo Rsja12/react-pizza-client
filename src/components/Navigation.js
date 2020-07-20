@@ -27,7 +27,7 @@ export class Navigation extends React.Component {
             <div className="ui inverted segment">
                 <div className="ui inverted secondary pointing menu">
                     <NavLink to="/" exact className="item">About</NavLink>
-                    <NavLink to="/pizzas" exact className="item">Menu</NavLink>
+                    <NavLink to="/menu" exact className="item">Menu</NavLink>
                     <div className="ui right inverted secondary pointing menu">
                         <NavLink to="/cart" exact className="item cart"><i className="shopping cart icon"></i>Cart ( { this.numOfItems() }  ) </NavLink>    
                     </div>
@@ -42,5 +42,3 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(Navigation)
-
-// test
