@@ -1,9 +1,9 @@
 import React from 'react'
-import '../styles/Navigation.css'
+import '../styles/Navbar.css'
 import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-export class Navigation extends React.Component {
+export class Navbar extends React.Component {
 
     numOfItems() {
         if( this.props.cart.length === 0 ) {
@@ -41,4 +41,4 @@ const mapStateToProps = state => ({
     cart: Object.values(state.cart)
 })
 
-export default connect(mapStateToProps)(Navigation)
+export default connect(mapStateToProps)(Navbar)

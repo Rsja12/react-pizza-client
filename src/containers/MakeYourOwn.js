@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Navigation from '../components/Navigation'
+import Navbar from '../components/Navbar'
 import Form from '../components/Form'
 
 export class MakeYourOwn extends Component {
@@ -7,7 +7,7 @@ export class MakeYourOwn extends Component {
     render() {
         return (
             <div>
-                <Navigation />
+                <Navbar />
                 <Form />
             </div>
         )

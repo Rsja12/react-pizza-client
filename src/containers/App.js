@@ -1,23 +1,22 @@
 import React from 'react'
-import { Router, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-import history from '../history'
 import About from './About'
 import Menu from './Menu'
 import Cart from '../components/Cart'
-import Navigation from '../components/Navigation'
+import Navbar from '../components/Navbar'
 import '../styles/App.css'
 
 const App = () => {
     return (
-        <Router history={history}>
-            <Navigation />
+        <BrowserRouter>
+            <Navbar />
             <div>
                 <Route exact path="/" component={About} />
                 <Route exact path="/menu" component={Menu} />
                 <Route exact path="/cart" component={Cart} />
             </div>
-        </Router>
+        </BrowserRouter>
     )
 }
 
