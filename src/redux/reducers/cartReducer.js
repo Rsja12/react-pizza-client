@@ -1,37 +1,35 @@
 import _ from 'lodash'
-import { v4 as uuidv4 } from 'uuid'
 
 export default ( state = {}, action ) => {
 
-    const pizzaObj = action.payload
+    const pizza = action.payload
 
     switch( action.type ) {
 
         case 'ADD_TO_CART':
-            pizzaObj.id = uuidv4()
-            pizzaObj.quantity = pizzaObj.quantity + 1 || 1
-            return { ...state, [pizzaObj.id]: pizzaObj }
+            pizza.quantity = pizza.quantity + 1 || 1
+            return { ...state, [pizza.id]: pizza }
             
         case 'INC_QTY':
             return {
                 ...state,
-                [pizzaObj.id]: {
-                    ...pizzaObj,
-                    quantity: pizzaObj.quantity + 1
+                [pizza.id]: {
+                    ...pizza,
+                    quantity: pizza.quantity + 1
                 }
             }
 
         case 'DEC_QTY':
-            if( pizzaObj.quantity > 1 ) {
+            if( pizza.quantity > 1 ) {
                 return {
                     ...state,
-                    [pizzaObj.id]: {
-                        ...pizzaObj,
-                        quantity: pizzaObj.quantity - 1
+                    [pizza.id]: {
+                        ...pizza,
+                        quantity: pizza.quantity - 1
                     }
                 } 
             }
-            return _.omit( state, pizzaObj.id )
+            return _.omit( state, pizza.id )
 
         default: 
             return state 

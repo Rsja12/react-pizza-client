@@ -1,35 +1,32 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
-import history from '../history'
+// import history from '../history'
 import { addToCart } from '../redux/actions'
 import '../styles/PizzaItem.css'
     
-export class PizzaItem extends Component {
+const PizzaItem = ({ pizza, addToCart }) => {
+    const { name, description, price } = pizza
 
-    handleClick = () => {
-       this.props.addToCart(this.props.pizza)
-       history.push('/cart')
+    const handleClick = () => {
+       addToCart(pizza)
     }
 
-    render() {
-        const { name, description, price } =  this.props.pizza
-        return (
-            <div className="ui container center aligned">
-                <div className="ui segment">
-                    <div className="header">{name}</div>
-                    <div className="content">{description}</div>
-                    <div>{price}</div>
-                    <button 
-                        onClick={ this.handleClick }
-                        className="button" 
-                        type="submit">
-                            add to cart
-                    </button>
-                </div>
+    return (
+        <div className="ui container center aligned">
+            <div className="ui segment">
+                <div className="header">{name}</div>
+                <div className="content">{description}</div>
+                <div>{price}</div>
+                <button 
+                    onClick={ handleClick }
+                    className="button" 
+                    type="submit">
+                        add to cart
+                </button>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 const mapStateToProps = state => ({
