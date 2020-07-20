@@ -8,30 +8,30 @@ export const MENU_DATA = {
     },
     2: {
         id: 2,
-        name: 'Pepperoni',
+        name: 'Four Cheese',
         ingredients: [
-            'pepperoni', 'mozarella', 'tomato sauce'
+            'mozzarella', 'gorgonzola', 'parmesan', 'robiola'
         ]
     },
     3: {
         id: 3,
-        name: 'Pepperoni',
+        name: 'Meat Lovers',
         ingredients: [
-            'pepperoni', 'mozarella', 'tomato sauce'
+            'pepperoni', 'italian sausage', 'smoked ham', 'applewood bacon', 'mozarella', 'tomato sauce'
         ]
     },
     4: {
         id: 4,
-        name: 'Pepperoni',
+        name: 'Hawaiian',
         ingredients: [
-            'pepperoni', 'mozarella', 'tomato sauce'
+            'smoked ham', 'grilled pineapple', 'mozarella', 'tomato sauce'
         ]
     },
     5: {
         id: 5,
-        name: 'Pepperoni',
+        name: 'Margherita',
         ingredients: [
-            'pepperoni', 'mozarella', 'tomato sauce'
+            'roasted garlic', 'basil', 'mozarella', 'tomato sauce'
         ]
     }
 }
