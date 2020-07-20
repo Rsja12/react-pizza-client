@@ -1,3 +1,6 @@
+.ui.inverted.segment {  
+    border-radius: 0;
+}
 
 .item {
     font-size: 1.25rem;

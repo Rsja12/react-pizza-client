@@ -1,25 +1,23 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-// import history from '../history'
 import { addToCart } from '../redux/actions'
 import '../styles/PizzaItem.css'
     
 const PizzaItem = ({ pizza, addToCart }) => {
-    const { name, description, price } = pizza
-
-    const handleClick = () => {
-       addToCart(pizza)
-    }
+    const { name, ingredients } = pizza
 
     return (
         <div className="ui container center aligned">
             <div className="ui segment">
                 <div className="header">{name}</div>
-                <div className="content">{description}</div>
-                <div>{price}</div>
+                <div className="content">
+                   {
+                       ingredients.join(', ')
+                   }
+                </div>
                 <button 
-                    onClick={ handleClick }
+                    onClick={() => addToCart(pizza)}
                     className="button" 
                     type="submit">
                         add to cart
@@ -29,11 +27,7 @@ const PizzaItem = ({ pizza, addToCart }) => {
     )
 }
 
-const mapStateToProps = state => ({
-    cart: state.cart
-})
-
-export default connect(mapStateToProps, { addToCart })(PizzaItem)
+export default connect(null, { addToCart })(PizzaItem)
 
 
 

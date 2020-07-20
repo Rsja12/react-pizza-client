@@ -1,4 +1,4 @@
-import { MENU_DATA } from './menuData'
+import { MENU_DATA } from '../menu/menuData'
 
 const INITIAL_STATE = MENU_DATA
 

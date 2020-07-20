@@ -1,9 +1,8 @@
 .home {
-    background-image: url('https://images.unsplash.com/photo-1507273026339-31b655f3752d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80');
+    background-image: url('https://images.unsplash.com/photo-1581873372796-635b67ca2008?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
 
     position: relative;
