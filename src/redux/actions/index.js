@@ -26,6 +26,12 @@ export const decreaseQuantity = pizza => {
     }
 }
 
+export const paymentSuccess = () => {
+    return {
+        type: 'PAYMENT_SUCCESS'
+    }
+}
+
 
 
 

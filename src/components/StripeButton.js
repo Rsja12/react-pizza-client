@@ -1,16 +1,20 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import StripeCheckout from 'react-stripe-checkout'
 
 import '../styles/Checkout.css'
+import { paymentSuccess } from '../redux/actions'
 
-const StripeButton = ({ price }) => {
+const StripeButton = ({ price, history, paymentSuccess }) => {
     const stripePrice = price * 100
     const publishableKey = 'pk_test_51H5yPuIOABoLmy2nqGUDyOvMUhsPvGDGkH3fTVMGPiaZF3AGoWQ69JtHaoMZ0YwHjrkSiki7sMhcrcmg0cNmyU1d00XN57Y0hk'
 
     // token that would get set to backend 
     const onToken = token => {
         console.log(token)
-        alert('SUCCESS')
+        paymentSuccess()
+        history.push('/success')
     }
 
     return (
@@ -30,4 +34,4 @@ const StripeButton = ({ price }) => {
     )
 }
 
-export default StripeButton
+export default withRouter(connect(null, { paymentSuccess })(StripeButton))

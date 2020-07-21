@@ -36,6 +36,10 @@ const Pricing = ({ cart }) => {
         return (calcSubtotal() * 1.07).toFixed(2)
     }
         
+    const renderPayButton = () => {
+        if (cart.length === 0) return
+        return <StripeButton price={calcTotal()} />
+    }
 
     return (
         <div className="price">
@@ -65,7 +69,7 @@ const Pricing = ({ cart }) => {
 
                 </div>
             </div>
-            <StripeButton price={calcTotal()} />
+            {renderPayButton()}
         </div>
     )
 }
