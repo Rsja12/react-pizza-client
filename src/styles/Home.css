@@ -1,9 +1,19 @@
 .home {
     background-image: url('https://images.unsplash.com/photo-1581873372796-635b67ca2008?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
-    height: 100vh;
+    height: 93vh;
+    width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: fixed;
+}
 
+.home-text {
+    font-size: xx-large;
     position: relative;
+    margin-top: 25%;
+    margin-left: 75%;
 }
