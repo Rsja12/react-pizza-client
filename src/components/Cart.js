@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 
 import CartList from './CartList'
 import Pricing from './Pricing'
-import Checkout from './Checkout'
 import '../styles/Cart.css'
 
 const Cart = ({ cart }) => {
@@ -26,7 +25,6 @@ const Cart = ({ cart }) => {
                 }   
             </div>
             <Pricing cart={cart} />
-            <Checkout cart={cart}/>
         </div>
     )
 }

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import '../styles/Pricing.css'
 import '../styles/Cart.css'
 
+import StripeButton from './StripeButton'
 
 const Pricing = ({ cart }) => {
 
@@ -64,6 +65,7 @@ const Pricing = ({ cart }) => {
 
                 </div>
             </div>
+            <StripeButton price={calcTotal()} />
         </div>
     )
 }
