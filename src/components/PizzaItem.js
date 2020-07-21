@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Button } from 'reactstrap'
 
 import { addToCart } from '../redux/actions'
 import '../styles/PizzaItem.css'
@@ -16,12 +17,14 @@ const PizzaItem = ({ pizza, addToCart }) => {
                        ingredients.join(', ')
                    }
                 </div>
-                <button 
+                <Button
+                    outline
+                    color='warning' 
                     onClick={() => addToCart(pizza)}
-                    className="button" 
+                    // className="button" 
                     type="submit">
                         add to cart
-                </button>
+                </Button>
             </div>
         </div>
     )

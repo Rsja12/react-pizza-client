@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore, compose } from 'redux'
 import { persistStore } from 'redux-persist'
 import { PersistGate } from 'redux-persist/integration/react'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 import App from './App'
 import reducers from './redux/reducers'
