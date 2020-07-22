@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import Table from 'react-bootstrap/Table'
 
 import CartList from './CartList'
 import Pricing from './Pricing'
@@ -11,9 +12,25 @@ const Cart = ({ cart }) => {
         if ( cart.length === 0 ) {
             return <div className="cart-msg">Your cart is currently empty</div>
         } else {
-            return cart.map( 
-                pizza => <CartList key={pizza.id} pizza={pizza}  />
+            return (
+                <Table striped borderless responsive='sm'>
+                    <thead>
+                        <tr>
+                            <th>Pizza</th>
+                            <th>Quantity</th>
+                            <th className='d-flex justify-content-end'>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            cart.map(pizza => (
+                                <CartList pizza={pizza} />
+                            ))
+                        }
+                    </tbody>
+                </Table>
             )
+                // pizza => <CartList key={pizza.id} pizza={pizza}/>
         }
     }
 
