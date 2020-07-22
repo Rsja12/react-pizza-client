@@ -9,7 +9,7 @@ const CartList = props => {
     const { name, quantity } = props.pizza 
     return (
         <tr>
-            <td>{name}</td>
+            <td className='font-weight-bold'>{name}</td>
             <td>
                 <span 
                     className='quantity-btn'

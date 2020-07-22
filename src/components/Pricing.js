@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import Table from 'react-bootstrap/Table'
 
 import '../styles/Pricing.css'
 import '../styles/Cart.css'
@@ -43,32 +44,20 @@ const Pricing = ({ cart }) => {
 
     return (
         <div className="price">
-            <div className="ui middle aligned divided list">
-                <div className="item">
-
-                    <div className="content">
-                        Subtotal
-                    </div>
-                    <div className="right floated content">
-                        ${ calcSubtotal() } 
-                    </div>
-
-                    <div className="content">
-                        Tax ( 7% )
-                    </div>
-                    <div className="right floated content">
-                        ${ calcTax() } 
-                    </div>
-
-                    <div className="content">
-                        Total
-                    </div>
-                    <div className="right floated content">
-                        ${ calcTotal() } 
-                    </div>
-
-                </div>
-            </div>
+            <Table striped>
+                <tr>
+                    <td className='font-weight-bold'>Subtotal</td>
+                    <td className='d-flex justify-content-end'>{calcSubtotal()}</td>
+                </tr>
+                <tr>
+                    <td className='font-weight-bold'>Tax</td>
+                    <td className='d-flex justify-content-end'>{calcTax()}</td>
+                </tr>
+                <tr>
+                    <td className='font-weight-bold'>Total</td>
+                    <td className='d-flex justify-content-end'>{calcTotal()}</td>
+                </tr>
+            </Table>
             {renderPayButton()}
         </div>
     )

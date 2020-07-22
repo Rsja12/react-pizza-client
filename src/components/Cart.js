@@ -13,7 +13,7 @@ const Cart = ({ cart }) => {
             return <div className="cart-msg">Your cart is currently empty</div>
         } else {
             return (
-                <Table striped borderless responsive='sm'>
+                <Table striped borderless>
                     <thead>
                         <tr>
                             <th>Pizza</th>
