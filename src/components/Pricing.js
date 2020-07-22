@@ -44,6 +44,11 @@ const Pricing = ({ cart }) => {
 
     return (
         <div className="price">
+            <div className='credit-info'>
+            **Card: 4242 4242 4242 4242**
+            <br />
+            **Any date after today, CVC: 123**
+            </div>
             <Table striped>
                 <tr>
                     <td className='font-weight-bold'>Subtotal</td>

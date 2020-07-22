@@ -1,11 +1,10 @@
 .price {
     width: 750px;
-    margin-top: 2%;
 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
 
-    padding: 2%;
+    padding-bottom: 2%;
 
     position: absolute;
     left: 50%;
@@ -13,6 +12,11 @@
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);    
 
+}
+
+.credit-info {
+    color: red;
+    text-align: center;
 }
 
 
