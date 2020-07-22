@@ -26,7 +26,7 @@ export const MENU_DATA = {
         id: 3,
         name: 'Roasted Veggie',
         ingredients: [
-            'roasted tomato', 'roasted peppers', 'roasted onion', 'mushrooms', 'mozarella', 'tomato sauce'
+            'roasted tomato', 'roasted peppers', 'onion', 'mozarella', 'tomato sauce'
         ],
         image: veggiePizza
     },

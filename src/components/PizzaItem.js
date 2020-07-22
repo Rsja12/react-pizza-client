@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
@@ -11,26 +10,24 @@ const PizzaItem = ({ pizza, addToCart }) => {
     const { name, ingredients, image } = pizza
 
     return (
-        <CardDeck>
-            <Card style={{ width: '25rem' }}>
-                <Card.Img variant='top' src={image} />
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>
-                        {
-                            ingredients.join(', ')
-                        }
-                    </Card.Text>
-                    <Button 
-                        onClick={() => addToCart(pizza)}
-                        variant='primary'
-                    >
-                        Add To Cart
-                    </Button>
-                </Card.Body>
-            </Card>
-        </CardDeck>
-        
+        <Card border='secondary'>
+            <Card.Img variant='top' src={image} class='card-img-top' />
+            <Card.Body className='d-flex flex-column'>
+                <Card.Title>{name}</Card.Title>
+                <Card.Text>
+                    {
+                        ingredients.join(', ')
+                    }
+                </Card.Text>
+                <Button
+                    className='hidden mt-auto' 
+                    onClick={() => addToCart(pizza)}
+                    variant='warning'
+                >
+                    Add To Cart
+                </Button>
+            </Card.Body>
+        </Card>
     )
 }
 
