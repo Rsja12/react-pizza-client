@@ -14,7 +14,8 @@ const StripeButton = ({ price, history, paymentSuccess }) => {
     const onToken = token => {
         console.log(token)
         paymentSuccess()
-        history.push('/success')
+        alert('Payment Successful!')
+        history.push('/')
     }
 
     return (
