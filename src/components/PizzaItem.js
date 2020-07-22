@@ -1,33 +1,36 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import CardDeck from 'react-bootstrap/CardDeck'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 import { addToCart } from '../redux/actions'
 import '../styles/PizzaItem.css'
-import pepperoniPizza from '../images/pepperoniPizza.webp'
     
 const PizzaItem = ({ pizza, addToCart }) => {
     const { name, ingredients, image } = pizza
 
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant='top' src={image} />
-            <Card.Body>
-                <Card.Title>{name}</Card.Title>
-                <Card.Text>
-                    {
-                        ingredients.join(', ')
-                    }
-                </Card.Text>
-                <Button 
-                    onClick={() => addToCart(pizza)}
-                    variant='primary'
-                >
-                    Add To Cart
-                </Button>
-            </Card.Body>
-        </Card>
+        <CardDeck>
+            <Card style={{ width: '25rem' }}>
+                <Card.Img variant='top' src={image} />
+                <Card.Body>
+                    <Card.Title>{name}</Card.Title>
+                    <Card.Text>
+                        {
+                            ingredients.join(', ')
+                        }
+                    </Card.Text>
+                    <Button 
+                        onClick={() => addToCart(pizza)}
+                        variant='primary'
+                    >
+                        Add To Cart
+                    </Button>
+                </Card.Body>
+            </Card>
+        </CardDeck>
+        
     )
 }
 
