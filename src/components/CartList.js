@@ -6,6 +6,8 @@ import '../styles/Cart.css'
 
 const CartList = props => {
 
+    // testings
+
     const { name, quantity } = props.pizza 
     return (
         <tr>

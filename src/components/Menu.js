@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col'
 import CardDeck from 'react-bootstrap/CardDeck'
 
 import '../styles/Menu.css'
-import PizzaItem from '../components/PizzaItem'
+import PizzaItem from './PizzaItem'
 
 const Menu = props => {
     const { menu } = props
